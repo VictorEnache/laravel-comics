@@ -216,15 +216,15 @@ return [
     ],
 
     'links' => [
-        'CHARACTERS',
-        'COMICS',
-        'MOVIES',
-        'TV',
-        'GAMES',
-        'COLLECTIBLES',
-        'VIDEOS',
-        'FANS',
-        'NEWS',
-        'SHOP'
+        'characters',
+        'comics',
+        'movies',
+        'tv',
+        'games',
+        'collectibles',
+        'videos',
+        'fans',
+        'news',
+        'shop'
     ]
 ];

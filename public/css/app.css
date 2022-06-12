@@ -50,6 +50,7 @@ a {
 .header_nav .row ul a {
   color: #1c1c1c;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .header_nav .row .search {
