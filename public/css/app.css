@@ -69,3 +69,28 @@ a {
   background-repeat: no-repeat;
 }
 
+main .container .fumetti {
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  row-gap: 3rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+main .container .fumetti .col {
+  width: calc(16.6666666667% - 1rem + 0.1666666667rem);
+}
+
+main .container .fumetti .col .image {
+  width: 100%;
+}
+
+main .container .fumetti .col .image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
