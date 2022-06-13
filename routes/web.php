@@ -19,6 +19,21 @@ Route::get('/comics', function () {
     return view('comics', compact('fumetti', 'links'));
 })->name('comics');
 
+
+
+Route::get('/comics/{id}', function ($id) {
+
+    $fumetti = (config('db.fumetti'));
+    $links = (config('db.links'));
+    if($id >= 0 && is_numeric($id) && $id < count($fumetti)){
+        $fumetto = $fumetti[$id];
+        return view('comics.show', compact('fumetti', 'links', 'fumetto'));
+    } else {
+        abort(404);
+    }
+})->name('single-comic');
+
+
 Route::get('/characters', function () {
     
     $links = (config('db.links'));

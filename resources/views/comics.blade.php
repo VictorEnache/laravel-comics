@@ -3,19 +3,22 @@
 @section('content')
     <div class="container">
         <div class="row fumetti">
-            @foreach($fumetti as $fumetto)
+            @foreach($fumetti as $index => $fumetto)
             <div class="col">
-                <div class="card">
-                    <div class="image">
-                        <img src="{{$fumetto['thumb']}}" alt="">
+                <a href="{{route('single-comic', $index )}}">
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="{{$fumetto['thumb']}}" alt="">
+                        </div>
+                        <!-- /.image -->
+                        <div class="text">
+                            {{$fumetto['series']}}
+                        </div>
+                        <!-- /.text -->
                     </div>
-                    <!-- /.image -->
-                    <div class="text">
-                    {{$fumetto['series']}}
-                    </div>
-                    <!-- /.text -->
-                </div>
-                <!-- /.card -->
+                    <!-- /.card -->
+                </a>
             </div>
             <!-- /.col -->
             @endforeach
